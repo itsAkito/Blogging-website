@@ -4,6 +4,7 @@ import cors from'cors'
 import { connectDB } from './configs/db.js';
 import adminRouter from './routes/adminRoutes.js';
 import newRouter from './routes/blogRoutes.js';
+import imageRouter from './routes/imageRoutes.js';
 // import imagekit from './configs/imagekit.js';
 const app=express();
 
@@ -19,6 +20,7 @@ app.get('/', (req,res)=>
 )
 app.use('/api/admin',adminRouter)
 app.use('/api/add',newRouter)
+app.use('/api/image', imageRouter);
 app.listen(PORT,()=>{
     console.log('Server is runing on port'+ PORT)
 })

@@ -12,6 +12,7 @@ import Login from './Pages/admin/Login'
 import 'quill/dist/quill.snow.css'
 import { Toaster } from 'react-hot-toast'
 import { useAppContext } from './context/AppContext'
+import ImageGenerator from './Pages/admin/imageGenerate'
 
 // import { useNavigate } from 'react-router-dom'
 const App = () => {
@@ -34,7 +35,8 @@ const App = () => {
         </Route> */}
         <Route path='/admin' element={token ? <Layout /> : <Login />}>
           <Route index element={<DashBoard />} />
-          <Route path='addblog' element={<AddBlog />} />      // ✅ Correct
+          <Route path='addblog' element={<AddBlog />} /> 
+          <Route path="image-gen" element={<ImageGenerator/>} />     // ✅ Correct
           <Route path='listblog' element={<ListBlog />} />
           <Route path='comment' element={<Comment />} />
         </Route>

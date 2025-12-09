@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # AI Blogs - Full Stack Blogging Application
 
 A modern full-stack blogging platform built with **React**, **Vite**, and **Node.js/Express**, featuring an admin dashboard for content management and image optimization with ImageKit.
